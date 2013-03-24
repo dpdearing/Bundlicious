@@ -5,12 +5,12 @@
 
 	"description": "Synchronize your del.icio.us bundles to your Chrome Bookmarks Bar",
 	"permissions": [
-		"tabs",
-		"http://*/",
-		"https://*/",
-		"notifications",
+ 		"tabs",
+        "http://*/",
+        "https://*/",
         "bookmarks",
-		"contextMenus"
+        "notifications",
+        "contextMenus"
 	],
 	"background": {
  		"page": "background.html"
