@@ -19,7 +19,7 @@
 	"content_scripts": [
 	    {
 	      "matches": ["http://*/*", "https://*/*"],
-	      "js": ["lib/jquery-1.8.3.min.js", "lib/v3/background.js"],
+	      "js": ["lib/v3/bg_script.js"],
 		  "run_at": "document_end"
 	    }
 	],

@@ -62,7 +62,7 @@
 				if (chromicious.isUserAuthorized()) {
 					var loggedUsername = chromicious.storage.getUsername();
 
-					$('#yahooid_lbl').html('You are logged as <a target="_blank" href="http://delicious.com/' + loggedUsername + '">' + loggedUsername + '</a>');
+					$('#yahooid_lbl').html('You are logged in as <a target="_blank" href="http://delicious.com/' + loggedUsername + '">' + loggedUsername + '</a>');
 					$('#yahooid_login_lbl').html('<a href="http://delicious.com/logout" target="_blank">Sign Out</a>');
 					
 					$('#sync_interval').attr('disabled', false);
@@ -72,7 +72,7 @@
 				}
 
 				var syncInterval = (chromicious.storage.getBookmarksSyncInterval() != null) ? 
-					chromicious.storage.getBookmarksSyncInterval(): BOOKMARKS_SYNC_INTERVAL;
+					chromicious.storage.getBookmarksSyncInterval(): SYNC_INTERVAL;
 
 				$('#sync_interval').html('');
 				for (option in syncOptions) {
