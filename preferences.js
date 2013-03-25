@@ -63,7 +63,7 @@
 					var loggedUsername = chromicious.storage.getUsername();
 
 					$('#yahooid_lbl').html('You are logged in as <a target="_blank" href="http://delicious.com/' + loggedUsername + '">' + loggedUsername + '</a>');
-					$('#yahooid_login_lbl').html('<a href="http://delicious.com/logout" target="_blank">Sign Out</a>');
+					$('#yahooid_login_lbl').html('<a href="http://previous.delicious.com/logout" target="_blank">Sign Out</a>');
 					
 					$('#sync_interval').attr('disabled', false);
 				} else {
