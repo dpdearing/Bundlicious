@@ -8,7 +8,6 @@
 		"tabs",
 		"http://*/",
 		"https://*/",
-		"notifications",
         "bookmarks",
 		"contextMenus"
 	],
@@ -32,6 +31,6 @@
 	"browser_action": {
 	  "default_icon": "resources/images/menu_icon.png",
 	  "default_title": "Delicious Bundles Bar",
-	  "default_popup": "menu.html"
+	  "default_popup": "preferences.html"
 	}
 }
