@@ -31,19 +31,10 @@ function initialize() {
 	
 	
 	if (chromiciousInstance.storage.isFirstLoad()) {
-		console.log('TODO [dpd] handle first load');
-		// chromiciousInstance.storage.setFirstLoad(0);
-		// preferencesWindow();
+		chromiciousInstance.storage.setFirstLoad(0);
+		preferencesWindow();
 	}
 
-//	chrome.extension.onConnect.addListener(function(port) {
-//		port.onMessage.addListener(function(msgObj) {
-//			if (msgObj.msg == 'saveBookmark') {
-//				saveBookmark();
-//			}
-//		});
-//	});
-				
 	// clean legacy data from storage
 	chromiciousInstance.storage.cleanLegacy();
 }
@@ -55,13 +46,11 @@ function initialize() {
  */
 function loadAuthorizationTriggers(chromiciousInstance) {
 	try {
-		console.log('background trying to add onConnect listener');
 		chrome.extension.onConnect.addListener(function(port) {
-			console.log('background onConnect:"'+port.name+'"');
+			console.log('background got onConnect');
 			try {
-				console.log('background now trying to add an onMessage listener ');
 				port.onMessage.addListener(function(msgObj) {
-					console.log('background message received: ' + msgObj.msg);
+					console.log('background got a message: ' + msgObj.msg);
 					
 					if (msgObj && msgObj.msg && msgObj.msg == 'updateCookies') {
 						var storedCookie = chromiciousInstance.storage.getAuthInfo();
