@@ -47,10 +47,10 @@ function initialize() {
 function loadAuthorizationTriggers(chromiciousInstance) {
 	try {
 		chrome.extension.onConnect.addListener(function(port) {
-			console.log('background got onConnect');
+			console.debug('background got onConnect');
 			try {
 				port.onMessage.addListener(function(msgObj) {
-					console.log('background got a message: ' + msgObj.msg);
+					console.debug('background got a message: ' + msgObj.msg);
 					
 					if (msgObj && msgObj.msg && msgObj.msg == 'updateCookies') {
 						var storedCookie = chromiciousInstance.storage.getAuthInfo();
