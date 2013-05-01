@@ -1,24 +1,10 @@
 			$(document).ready(function() {
 				restorePreferences();
 				
-				// Enable form validation				
-				var isFormValid = false;
-			
-			    $("#options_form").validationEngine({
-			        inlineValidation: true,
-			        success: function () {
-						isFormValid = true;
-					},
-			        failure: function() {}
-			    });
-			
 				// submission event
-				$('#options_form').bind('submit', function(event) {
-					if (isFormValid) {
-						isFormValid = false;
-						$('#save_button').attr('disabled', 'disabled');
-						savePreferences();
-					}
+				$('#options_form').submit(function(event) {
+					$('#save_button').attr('disabled', 'disabled');
+					savePreferences();
 				});
 				
 				// enable save button if any changes
@@ -51,7 +37,7 @@
 				}
 				
 				chromicious.storage.setBookmarksSyncInterval($('#sync_interval').val());
-				chromicious.storage.setNumberOfRecentBookmarks($('#number_of_recent').val());
+				//chromicious.storage.setNumberOfRecentBookmarks($('#number_of_recent').val());
 
 				displayNotification('Preferences have been saved.', 3000);
 			}
@@ -80,7 +66,7 @@
 					$('<option value="'+option+'" '+selected+'>'+syncOptions[option]+'</option>').appendTo('#sync_interval');
 				}
 
-				var numberOfRecent = (chromicious.storage.getNumberOfRecentBookmarks() != null) ?
-					chromicious.storage.getNumberOfRecentBookmarks() : RECENT_BOOKMARKS_TOTAL;
-				$('#number_of_recent').val(numberOfRecent);
+				//var numberOfRecent = (chromicious.storage.getNumberOfRecentBookmarks() != null) ?
+				//	chromicious.storage.getNumberOfRecentBookmarks() : RECENT_BOOKMARKS_TOTAL;
+				//$('#number_of_recent').val(numberOfRecent);
 			}
