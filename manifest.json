@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Delicious Bundles Bar (Chromicious+)",
-	"version": "2.5.2.1",
+	"version": "2.5.2.2",
 
 	"description": "Synchronize your del.icio.us bundles to your Chrome Bookmarks Bar",
 	"permissions": [
