@@ -3,5 +3,6 @@ The [Delicious Bundles Bar](https://chrome.google.com/webstore/detail/delicious-
 
 Find the [Delicious Bundles Bar in the Chrome Web Store](https://chrome.google.com/webstore/detail/delicious-bundles-bar-chr/iimmknenodliepegffgbpbfgfoeilonk)
 
-This is a fork of [Chromicious](https://github.com/Yasik/Chromicious).
+![](http://dpdearing.github.io/Bundlicious/img/delicious-bundles-bar.jpg)
 
+This is a fork of [Chromicious](https://github.com/Yasik/Chromicious).
